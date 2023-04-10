@@ -1,0 +1,42 @@
+.header {
+    padding: 16px 0 20px; /* верх право лево низ, право лево - регулирует .container */
+}
+
+.header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px 0;
+}
+
+.header__navigation {
+    order:1; /* перенесли вниз - сделали вторыми по списку, пропустили вврех кнопку Страна с ее списоком*/
+    flex-basis: 100%; /* будет растягиваться */
+}
+
+@media (min-width: 560px) {
+    .header {
+        padding: 24px 0;
+    }
+    .header__logo {
+        margin-right: auto;
+    }
+
+    .header__navigation {
+        order:0;
+        flex-basis: auto;
+        margin-right: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        font-size: 20px;      
+    }
+
+    .header__navigation {
+        margin-right: 84px;
+
+    }
+}
